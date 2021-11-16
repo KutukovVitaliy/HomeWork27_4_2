@@ -24,13 +24,15 @@ public:
         x = inX;
         y = inY;
     }
+    int GetX(){return  x;}
+    int GetY(){return  y;}
 };
 
 class Figure {
     Centers center;
     Colors color;
 public:
-    Figure(const Centers& inCenter, Colors inColor = Colors::None): center(inCenter), color(inColor){}
+    Figure(const Centers inCenter, Colors inColor = Colors::None): center(inCenter), color(inColor){}
     Figure(Colors inColor) : color(inColor){}
     Figure(int inX, int inY){center.SetCenter(inX, inY);color = Colors::None;}
     Figure(int inX, int inY, Colors inColor){center.SetCenter(inX, inY);color = inColor;}
@@ -38,6 +40,7 @@ public:
 
     Centers GetCenter(){ return center;}
     void SetColor(Colors inColor){color = inColor;}
+    void SetCenter(int inX, int inY){center.SetCenter(inX, inY);}
     Colors GetColor(){return color;}
 };
 
@@ -49,6 +52,8 @@ public:
         length = inLength;
         width = inWidth;
     }
+    double GetLength(){return length;}
+    double GetWidth(){return  width;}
 };
 
 

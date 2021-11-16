@@ -15,7 +15,7 @@ public:
     Circles(int inX, int inY, Colors inColor) : Figure(inX, inY, inColor){radius = 1.0;}
     Circles(int inX, int inY, Colors inColor, double inRadius) : Figure(inX, inY, inColor),radius(inRadius){}
     Circles(double inRadius) : Figure(), radius(inRadius){}
-    Circles(const Centers& inCenter, Colors inColor, double inRadius) : Figure(inCenter, inColor),radius(inRadius){}
+    Circles(const Centers inCenter, Colors inColor, double inRadius) : Figure(inCenter, inColor),radius(inRadius){}
     double GetArea(){
         return std::pow(radius,2) * M_PI;
     }
