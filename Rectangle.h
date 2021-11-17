@@ -10,6 +10,7 @@ class Rectangles : public Figure {
     double length;
     double width;
 public:
+    Rectangles() : Figure() {length = 1.0; width = 1.0;}
     Rectangles(Centers center, double inLength, double inWidth) : Figure(center, Colors::None){
         length = inLength;
         width = inWidth;
@@ -24,6 +25,7 @@ public:
     void SetWidth(double inWidth){
         width = inWidth;
     }
+    double GetArea(){return length * width;}
     DescrRectangle GetDescrRectangle(){
         DescrRectangle rect(this->GetCenter(), length, width);
 
